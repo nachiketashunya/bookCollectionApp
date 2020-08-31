@@ -1,0 +1,292 @@
+/* general styling */
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* styling heading */
+div.main-header {
+    background-color: #00416d;
+    color: #fff;
+    width: 100%;
+    height: 15vh;
+}
+
+.heading h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.3rem;
+    padding: 20px;
+}
+
+
+/* navbar styling */
+.main-navbar {
+    margin: 20px auto 20px auto;
+    width: 90%;
+}
+
+ul.media-hide {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+ul.media-hide .nav-item {
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    width: 25%;
+}
+
+.nav-item:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+ul.media-hide .nav-item h4{
+    font-size: 20px;
+    padding: 4px 15px;
+}
+
+.active {
+    background-color: #f8bd7f;
+    color: #3d3d3d;
+}
+
+/* styling add new book section */
+.form {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-shadow: 7px 7px 2px #ccc;
+    width: 70%;
+    margin: 20px auto 0px auto;
+}
+
+#add-book-form {
+    padding: 20px; 
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+
+/* styling books collection */
+section.collection {
+    margin: 40px auto 0px auto;
+    width: 90%;
+}
+
+.books-collection-content-inner table, 
+.books-collection-content-inner .search-book{    
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+/* styling table */
+table thead th{
+    border-right: 1px solid #ccc;
+    background-color: #f6f6f6;
+    letter-spacing: 0.00em;;
+    padding: 5px 5px;
+}
+
+table thead th:last-child{
+    border: none;
+}
+
+.books-table-body tr{
+    padding: 30px 0px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.books-table-body td{
+    padding: 20px;
+}
+
+.search-book {
+    margin-bottom: 20px !important;
+}
+
+
+/* styling favourite books section */
+#favourite-book {
+    padding: 20px 10px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+#favourite-book .title {
+    padding-bottom: 5px;
+}
+
+#favourite-book .summary {
+    padding: 0px 5px;
+}
+
+
+/* styling footer */
+.footer {
+    position: absolute;
+    bottom: 0% !important;
+    width: 100%;
+    height: 50px;
+    background-color: #e4e4e4;
+}
+
+footer p{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 1.2rem;
+}
+
+
+/*display appropriate section */
+#new-book-section-content, 
+#books-collection-content,
+#favourite-books-content {
+    display: none;
+} 
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* hide hamberger */
+.hamberger {
+    display: none;
+}
+
+
+/* media query for screen size  */
+@media(max-width: 720px){
+    .main-navbar{
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    /* styling hamberger */
+    .hamberger {
+        display: block;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .hamberger:hover{
+        cursor: pointer;
+    }
+
+    .hamberger-menu{
+        background-color: #f3f3f3e3;
+        width: 100%;
+        height: 35vh;
+        position: absolute;
+        top: 150px;
+        left: 0px;
+        z-index: 2;
+    }
+
+    .hamberger-item{
+        margin: 20px 20px 20px 20px;
+        border-bottom: 1px solid #a3a3a3;
+    }
+
+    .hamberger-item:last-child{
+        border: none;
+    }
+
+    .hamberger-item h4{
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    /* styling heading */
+    .heading{
+        text-align: center;
+    }
+
+    .heading h2 {
+        font-size: 1.9rem;
+    }
+
+    /* styling nav bar */
+    ul.media-hide {
+        display: none;
+    }
+
+    /* collection section */
+    section.collection {
+        width: 100%;
+    }
+
+    /* styling add new book section */
+    .form {
+        width: 95%;
+    }
+
+    #add-book-section{
+        padding: 10px;
+    }
+
+    /* styling books section */
+    h4{
+        font-size: 15px;
+    }
+
+    .books-table-body td{
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .books-table-body a{
+        font-size: 8px !important;
+    }
+
+    /* styling favourite books section */
+    #favourite-book {
+        display: block;
+    }
+
+    /* styling footer */
+    .footer {
+        position: absolute;
+        bottom: 0% !important;
+        width: 100%;
+        height: 50px;
+        background-color: #e4e4e4;
+    }
+
+    footer p{
+        text-align: center;
+        padding-top: 10px;
+        font-size: 1.2rem;
+    }
+}

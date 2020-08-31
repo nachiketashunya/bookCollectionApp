@@ -1,0 +1,131 @@
+<!-- Books collection app with HTML, CSS, JAVASCRIPT & BOOTSTRAP
+     Developer : Nachiketa Purohit 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Custom css file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Shunya's Books</title>
+</head>
+
+<body onload="displayBooks()">
+    <div class="main-header">
+        <div class="container">
+            <div class="heading">
+                <h2> Shunya's Books</h2>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-navbar">
+        <div class="container">
+                <p class="hamberger"><i class="fa fa-bars"></i></p>
+                <div class="hamberger-menu hide">
+                    <ul class="nav-items">
+                        <li class="hamberger-item nav-item" id="new-book-section">
+                            <h4> Add New Book </h4>
+                        </li>
+                        <li class="hamberger-item nav-item" id="books-collection">
+                            <h4>Books</h4>
+                        </li>
+                        <li class="hamberger-item nav-item" id="favourite-books">
+                            <h4>Favourite Books</h4>
+                        </li>
+                    </ul>     
+                </div>
+
+                <ul class="nav-items media-hide">
+                    <li class="nav-item highlight" id="new-book-section">
+                        <h4> Add New Book </h4>
+                    </li>
+                    <li class="nav-item highlight active" id="books-collection">
+                        <h4>Books </h4>
+                    </li>
+                    <li class="nav-item highlight" id="favourite-books">
+                        <h4>Favourite Books</h4>
+                    </li>
+                </ul>           
+        </div>
+    </nav>
+
+    <section class="collection">
+        <div class="container">
+            <div class="option" id="new-book-section-content">
+                <div class="new-book-section-content-inner">
+                    <div class="form">
+                        <form id="add-book-form" >
+                            <div class="form-group">
+                                <label for="title">Title</label> <br>
+                                <input type="text" id="title" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="author">Author</label> <br>
+                                <input type="text" id="author" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="genre">Genre</label> <br>
+                                <input type="text" id="genre" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Add Book" class="btn btn-light btn-block">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="option show" id="books-collection-content">
+                <div class="books-collection-content-inner">
+                    <div class="search-book">
+                        <input type="text" id="search-input" placeholder="search a book" class="form-control">
+                    </div>
+
+                    <!-- Table of books -->
+                    <table class="books-table">
+                        <thead>
+                            <tr>
+                                <th><h4>Title</h4></th>
+                                <th><h4>Author</h4></th>
+                                <th><h4>Genre</h4></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="books-table-body">
+                            <!-- here comes 'tr' -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="option" id="favourite-books-content">
+                <div class="favourite-books-content-inner">
+                    <div id="favourite-book">
+                        <h2 class="title">The Alchemist by <span class="author">Poelo Coelho</span></h2>
+                        <p class="summary"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore totam aliquam autem id eum asperiores facere at cumque beatae quod commodi, sint temporibus fugit, veritatis incidunt qui odit explicabo nemo ea alias labore sed repellendus pariatur? Officiis placeat cumque nostrum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p> &copy; Shunya Book Collection PVT LTD. </p>
+    </footer>
+
+    <!-- script -->
+    <script src="app.js"></script>
+</body>
+</html>
